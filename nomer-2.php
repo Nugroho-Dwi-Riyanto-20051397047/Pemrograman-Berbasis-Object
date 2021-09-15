@@ -1,7 +1,3 @@
-<!-- Nama  : Muhammad Ramadhan Muna -->
-<!-- NIM   : 20051397059 -->
-<!-- Prodi : D4 Manajemen Informatika - 2020A -->
-
 <!DOCTYPE HTML>  
 <html>
 <head>

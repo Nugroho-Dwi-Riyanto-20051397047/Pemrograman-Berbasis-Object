@@ -1,0 +1,46 @@
+<?php
+
+class Orang{
+    public $nama;
+    Public $umur;
+
+    public function __construct($nama, $umur){
+        $this->nama= $nama;
+        $this->umur= $umur;
+    }
+    
+    public function getOrang(){
+        $info = "{$this->nama} | Umur : {$this->umur}";
+
+        return $info;
+
+    }
+}  
+
+class Dosen extends Orang{
+    public $nip;
+
+    public function __construct($nama, $umur, $nip){
+        parent::__construct($nama, $umur);
+
+        $this->nip= $nip;
+    }
+
+
+    public function getInfoDosen(){
+        $info = "Nama Dosen : ". parent::getOrang()." | Nip : {$this->nip}";
+
+        return $info;
+    }
+}
+
+$Info1 = new Dosen("Fahri Aditya", "20", "200534979");
+$Info2 = new Dosen("Bagus Dewantara", "22", "200534899");
+$Info3= new Dosen("Fadli Dwi", "25", "200534564");
+
+echo $Info1->getInfoDosen();
+echo "<br>";
+echo $Info2->getInfoDosen();
+echo "<br>";
+echo $Info3->getInfoDosen();
+?>
